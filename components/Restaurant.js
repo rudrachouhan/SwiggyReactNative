@@ -5,11 +5,15 @@ import { ImageBackground } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const Restaurant = ({ item }) => {
+
+  const navigation = useNavigation();
+
   return (
     <View className="my-6 ml-3">
-      <Pressable>
+      <Pressable onPress={() => navigation.navigate('Hotel')} >
         <View className="flex-row">
           <ImageBackground
             source={{ uri: item.image }}
