@@ -40,7 +40,7 @@ const Quickies = () => {
                 <View className='flex-row items-center mt-1'>
                     <MaterialIcons name="stars" size={24} color="green" />
                     <Text className='mr-2 ml-1'>{item.rating}</Text>
-                    <Text className='mr-2'></Text>
+                    <Text className='mr-1'>•</Text>
                     <Text>{item.time}mins</Text>
                 </View>
           </Pressable>

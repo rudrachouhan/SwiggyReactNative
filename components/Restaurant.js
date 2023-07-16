@@ -8,12 +8,25 @@ import { FontAwesome } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
 const Restaurant = ({ item }) => {
-
   const navigation = useNavigation();
 
   return (
     <View className="my-6 ml-3">
-      <Pressable onPress={() => navigation.navigate('Hotel')} >
+      <Pressable
+        onPress={() =>
+          navigation.navigate("Hotel", {
+            id: item.id,
+            name: item.name,
+            image: item.image,
+            time: item.time,
+            rating: item.rating,
+            adress: item.adress,
+            cost_for_two: item.cost_for_two,
+            cuisines: item.cuisines,
+            menu: item.menu
+          })
+        }
+      >
         <View className="flex-row">
           <ImageBackground
             source={{ uri: item.image }}
